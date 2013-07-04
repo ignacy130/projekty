@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="38867ignac.RemindIn" Publisher="CN=D91F540F-332A-4BF3-9FF6-8CDDB55F5CDE" Version="0.7.0.3" />
+  <Properties>
+    <DisplayName>RemindIn'</DisplayName>
+    <PublisherDisplayName>ignac</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="remindin.App">
+      <VisualElements DisplayName="RemindIn'" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Quick task reminding app." ForegroundText="light" BackgroundColor="#8432cb" ToastCapable="true">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\badge.png" />
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\wide_logo.png" ShortName="RI" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#8432cb" />
+        <InitialRotationPreference>
+          <Rotation Preference="portrait" />
+          <Rotation Preference="landscape" />
+          <Rotation Preference="portraitFlipped" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="remindin.MainPage">
+          <BackgroundTasks>
+            <Task Type="pushNotification" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>

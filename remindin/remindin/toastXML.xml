@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<toast duration="long">
+
+  <visual>
+
+    <binding template="ToastText1">
+      <audio src="ms-winsoundevent:Notification.Reminder" loop="false"/>
+      <text id="2">bodyText</text>
+    </binding>
+	  
+  </visual>
+
+</toast>
+
